@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
-
+//top class
 class enemy{
-	private:
+//encapsulation
+	protected:
 		string name = "Enemy";
 		int health = 100;
 	public:
@@ -22,8 +23,16 @@ class enemy{
 		}
 };
 
+//inheritance
+class goblin: public enemy{
+	public:
+		int doubleHealth(){
+			return health * 2;
+		}
+
+};
 int main(){
-	enemy e;
-	cout << e.attack();
+	goblin gob;
+	cout << gob.damageTaken(30) << " " << gob.doubleHealth() << endl;
 	return 0;
 }
