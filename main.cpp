@@ -21,6 +21,9 @@ class enemy{
 			srand(time(NULL));
 			return rand() % 100; 
 		}
+		int doubleHealth(){
+			return health * 3;
+		}
 };
 
 //inheritance
